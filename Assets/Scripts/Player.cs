@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,7 +22,7 @@ public class Player : MonoBehaviour
 
     // Index of the next card (Hit button)
     public int cardIndex = 0;
-
+    
     // AceList to switch the value of the aces when needed
     List<Card> aceList = new List<Card>();
 
@@ -30,7 +31,6 @@ public class Player : MonoBehaviour
         GetCard();
         GetCard();
     }
-
 
     // Add a hand to the player/dealer's hand
     public int GetCard()
@@ -48,7 +48,8 @@ public class Player : MonoBehaviour
         {
             aceList.Add(hand[cardIndex].GetComponent<Card>());
         }
-
+        //check if we should use 11 instead of 1
+        //aceCheck();
         cardIndex++;
         return handValue;
     }
