@@ -6,25 +6,25 @@ public class Deck : MonoBehaviour
 {
     public Sprite[] cardSprites;
     protected int[] cardValues = new int[53];
-    private int currentIndex = 0;
+    private int currentIndex = 0;//initialize index at 0
 
     void Start()
     {
         AssignCardValues();
     }
 
-    void AssignCardValues() 
+    void AssignCardValues() //gets card values
     {
         int num = 0;
-
         // loop trough all the cards
         for (int i = 0; i < cardSprites.Length; i++)
         {
             num = i;
-
+            
             num %= 13;
 
-            // if there's a remainder after the division then use the remainder unless  it's bigger than 10, in that case use 10
+            // if there's a remainder after the division then use the remainder unless  \
+            // it's bigger than 10, in that case use 10
             if (num > 10 || num == 0)
             {
                 num = 10;
@@ -34,6 +34,7 @@ public class Deck : MonoBehaviour
         }
     }
 
+    //Reference for the shuffle method \
     //https://stackoverflow.com/questions/13766209/efficient-swapping-of-elements-of-an-array-in-kava
     public void Shuffle()
     {
@@ -49,7 +50,6 @@ public class Deck : MonoBehaviour
             cardValues[i] = cardValues[k];
             cardValues[k] = value;
         }
-
         currentIndex = 1;
     }
 
