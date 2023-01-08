@@ -7,6 +7,6 @@ public class BetSlider : MonoBehaviour
     
     void Update()
     {
-        betBttn.text = betSlider.value.ToString();
+        betBttn.text = "$" + betSlider.value;
     }
 }

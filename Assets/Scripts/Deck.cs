@@ -50,7 +50,6 @@ public class Deck : MonoBehaviour
             cardValues[i] = cardValues[k];
             cardValues[k] = value;
         }
-
         currentIndex = 1;
     }
 
