@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     //bet amount
     public TMPro.TMP_Text amountBet;
     private int pot = 0;
-    
+
     void Start()
     {
         GameObject.Find("Deck").GetComponent<Deck>().Shuffle();
